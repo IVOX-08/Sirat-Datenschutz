@@ -1,0 +1,106 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sirat – Hilfe & Support</title><style>*{box-sizing:border-box}body{margin:0;background:#071c14;color:#f7f0df;font:17px/1.65 system-ui,sans-serif}main{max-width:860px;margin:auto;padding:48px 24px}header{display:flex;align-items:center;gap:22px;margin-bottom:36px}.logo svg{width:82px;height:82px}.brand{font-size:44px;letter-spacing:-1px;font-weight:750;line-height:1.1;color:#f5dfad}.muted{color:#b7c5bc}nav{display:flex;gap:18px;flex-wrap:wrap;margin:22px 0 36px}a{color:#f5cf7a;text-underline-offset:4px}section{padding:24px 28px;margin:18px 0;background:#102d21;border:1px solid #39523a;border-radius:20px}h1,h2{line-height:1.2;color:#f5dfad}h1{font-size:32px}h2{font-size:24px;margin-top:0}summary{cursor:pointer;color:#f5dfad;font-weight:650;margin:16px 0}p{margin:10px 0}footer{margin:32px 0;color:#b7c5bc;font-size:14px}small{font-size:14px}@media(max-width:500px){main{padding:28px 18px}section{padding:22px}.brand{font-size:38px}}</style></head><body><main><header><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="eb-title">
+  <title id="eb-title">EB — Elmedin Budimlic</title>
+
+  <defs>
+    <!-- Goldverlauf aus dem Originallogo: Glanz #F5DFAD, Mitte #C8A468, Tiefe #7B562A -->
+    <linearGradient id="gold" x1="0.05" y1="0" x2="0.9" y2="1">
+      <stop offset="0"    stop-color="#F7E6BC"/>
+      <stop offset="0.30" stop-color="#DCBE83"/>
+      <stop offset="0.60" stop-color="#C8A468"/>
+      <stop offset="1"    stop-color="#8A6A2E"/>
+    </linearGradient>
+    <linearGradient id="goldRibbon" x1="0" y1="0" x2="1" y2="0.6">
+      <stop offset="0"    stop-color="#F5DFAD"/>
+      <stop offset="0.55" stop-color="#D4B274"/>
+      <stop offset="1"    stop-color="#A98543"/>
+    </linearGradient>
+
+    <!-- Konturen, die als Fuge ausgespart werden -->
+    <path id="pB" d="M 244 176 H 366
+                     C 420 176 452 208 452 249
+                     C 452 277 436 300 410 311
+                     C 444 322 466 349 466 385
+                     C 466 433 428 470 366 470
+                     H 244 Z"/>
+    <path id="pRibbon" d="M 16 298
+                     C 92 250 184 274 262 334
+                     C 324 382 388 404 452 392
+                     C 400 428 330 420 260 380
+                     C 180 334 94 306 16 298 Z"/>
+
+    <!-- E liegt hinter B und hinter dem Band -->
+    <mask id="knockE" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+      <rect width="512" height="512" fill="#fff"/>
+      <use href="#pB"      fill="none" stroke="#000" stroke-width="15"/>
+      <use href="#pRibbon" fill="none" stroke="#000" stroke-width="15"/>
+    </mask>
+    <!-- B liegt hinter dem Band -->
+    <mask id="knockB" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+      <rect width="512" height="512" fill="#fff"/>
+      <use href="#pRibbon" fill="none" stroke="#000" stroke-width="15"/>
+    </mask>
+    <!-- Minarettschaft laeuft hinter das B -->
+    <mask id="knockMin" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+      <rect width="512" height="512" fill="#fff"/>
+      <use href="#pB" fill="#000" stroke="#000" stroke-width="15"/>
+    </mask>
+    <!-- Hilal: Kreis minus versetztem Kreis -->
+    <mask id="crescent" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+      <circle cx="306" cy="24" r="15" fill="#fff"/>
+      <circle cx="313.5" cy="18.5" r="12.5" fill="#000"/>
+    </mask>
+  </defs>
+
+  <!-- ===== Minarett (hinter dem B) ===== -->
+  <g fill="url(#gold)" mask="url(#knockMin)">
+    <circle cx="306" cy="24" r="15" mask="url(#crescent)"/>
+    <rect x="303" y="39" width="6" height="11" rx="2"/>
+    <!-- Zwiebelkuppel: bauchig, mit eingezogenem Fuss -->
+    <path d="M 306 50
+             C 297 68 283 84 283 98
+             C 283 113 293 122 306 122
+             C 319 122 329 113 329 98
+             C 329 84 315 68 306 50 Z"/>
+    <!-- Kranzgesims -->
+    <rect x="284" y="124" width="44" height="10" rx="2"/>
+    <rect x="290" y="136" width="32" height="8" rx="2"/>
+    <!-- Schaft mit Kannelueren, laeuft unten hinter das B -->
+    <rect x="293" y="146" width="26" height="72"/>
+    <rect x="300.5" y="152" width="2.5" height="26" fill="#7B562A" opacity="0.4"/>
+    <rect x="308.5" y="152" width="2.5" height="26" fill="#7B562A" opacity="0.4"/>
+  </g>
+
+  <!-- ===== E (hinter B und Band) ===== -->
+  <path mask="url(#knockE)" fill="url(#gold)"
+        d="M 44 118 H 264 V 168
+           H  98 V 232
+           H 228 V 278
+           H  98 V 352
+           H 266 V 404
+           H  44 Z"/>
+
+  <!-- ===== B (hinter dem Band) ===== -->
+  <g mask="url(#knockB)">
+    <path fill="url(#gold)" fill-rule="evenodd" d="
+             M 244 176 H 366
+             C 420 176 452 208 452 249
+             C 452 277 436 300 410 311
+             C 444 322 466 349 466 385
+             C 466 433 428 470 366 470
+             H 244 Z
+             M 300 222 V 286 H 358
+             C 384 286 400 273 400 253
+             C 400 233 384 222 358 222 Z
+             M 300 356 V 424 H 360
+             C 390 424 410 410 410 389
+             C 410 368 390 356 360 356 Z"/>
+  </g>
+
+  <!-- ===== Schwung, liegt vorn ===== -->
+  <use href="#pRibbon" fill="url(#goldRibbon)"/>
+</svg>
+</div><div><div class="brand">Sirat</div><div class="muted">Gebetszeiten · Koran · Qibla · Dhikr</div></div></header><h1>Hilfe & Support</h1><p>Sirat ist eine unabhängige, kostenlose Sadaqa Jariya für Muslime weltweit.</p><nav aria-label="Languages"><a href="#de">Deutsch</a><a href="#en">English</a><a href="#bs">Bosanski</a><a href="#ar">العربية</a><a href="./">Datenschutz / Privacy</a></nav>
+<section id="de"><h2>So helfen wir dir</h2><p>Fragen, Fehler oder Vorschläge? Schreib an <a href="mailto:muhamedgolac311@gmail.com">muhamedgolac311@gmail.com</a> oder nutze <a href="https://wa.me/4917661887123">WhatsApp: +49 176 61887123</a>.</p><p>Nenne bitte dein Gerätemodell, Android-/iOS-Version und die App-Version. Bei Gebetszeiten helfen Stadt, Datum und Berechnungsmethode. Bitte sende keine Passwörter oder Zugangsschlüssel.</p><details><summary>Mein Ort wird nicht gefunden</summary><p>Öffne die Standortauswahl und nutze die einmalige Ortung oder suche deine Stadt von Hand. Für die Ortung muss der Standortdienst des Geräts aktiviert sein. Du kannst Sirat auch ohne Standortfreigabe nutzen.</p></details><details><summary>Gebetszeiten unterscheiden sich</summary><p>Prüfe Ort, Zeitzone, Berechnungsmethode und manuelle Korrekturen. Unterschiedliche Methoden und örtliche Festlegungen können abweichende Zeiten ergeben. IGBD-Ortstabellen werden nur für unterstützte Orte verwendet.</p></details><details><summary>Erinnerung oder Adhan fehlt</summary><p>Prüfe die Benachrichtigungsfreigabe und deine Einstellungen pro Gebet. Android kann zusätzliche Alarm- und Akku-Einstellungen benötigen. Auf iPhone und iPad gelten die Ton- und Hintergrundbeschränkungen von iOS. Die App zeigt dazu Hinweise in den Einstellungen.</p></details><details><summary>Muss ich mich anmelden?</summary><p>Für die alltägliche Nutzung ist keine persönliche Anmeldung nötig. Der geschützte Herausgeberbereich dient nur zur Verwaltung von Mitteilungen. Mitteilungen und Reaktionen nutzen im Hintergrund eine anonyme Firebase-Kennung.</p></details><details><summary>Datenschutz und Löschanfragen</summary><p>Informationen zur Verarbeitung und deinen Rechten stehen in der <a href="./#de">Datenschutzerklärung</a>. Für Fragen zu deinen Daten erreichst du uns per E-Mail. Bitte sende keine Passwörter.</p></details></section>
+<section id="en" lang="en"><h2>Help & support</h2><p>Sirat is an independent, free sadaqa jariya for Muslims around the world. For questions, problems or suggestions, email <a href="mailto:muhamedgolac311@gmail.com">muhamedgolac311@gmail.com</a> or contact us on <a href="https://wa.me/4917661887123">WhatsApp</a>.</p><p>Please include your device model, Android/iOS version and app version. For prayer-time questions, include the city, date and calculation method. Never send passwords or access keys.</p><p>Location permission is optional: you can select a city manually. Check your calculation method and corrections when times differ. For reminders, check notification permissions and device battery/alarm settings. iOS limits notification sounds and background activity. Everyday use requires no personal sign-in.</p><p>See our <a href="./#en">privacy policy</a> for data processing and your rights.</p></section>
+<section id="bs" lang="bs"><h2>Pomoć i podrška</h2><p>Sirat je nezavisna, besplatna sadaka džarija za muslimane širom svijeta. Za pitanja, greške ili prijedloge pišite na <a href="mailto:muhamedgolac311@gmail.com">muhamedgolac311@gmail.com</a> ili putem <a href="https://wa.me/4917661887123">WhatsAppa</a>.</p><p>Navedite model uređaja, verziju Androida/iOS-a i aplikacije. Za namaska vremena navedite grad, datum i način izračuna. Ne šaljite lozinke ni pristupne ključeve.</p><p>Lokacija je dobrovoljna; grad možete odabrati ručno. Provjerite način izračuna, korekcije i dozvole za obavijesti. Za svakodnevno korištenje nije potrebna lična prijava. Više u <a href="./#bs">politici privatnosti</a>.</p></section>
+<section id="ar" lang="ar" dir="rtl"><h2>المساعدة والدعم</h2><p>صراط تطبيق مستقل ومجاني، صدقة جارية للمسلمين في جميع أنحاء العالم. للأسئلة والملاحظات، تواصل عبر البريد <a href="mailto:muhamedgolac311@gmail.com">muhamedgolac311@gmail.com</a> أو <a href="https://wa.me/4917661887123">واتساب</a>.</p><p>يرجى ذكر نوع الجهاز وإصدار النظام والتطبيق. وللاستفسار عن أوقات الصلاة، اذكر المدينة والتاريخ وطريقة الحساب. لا ترسل كلمات المرور أو مفاتيح الوصول.</p><p>إذن الموقع اختياري، ويمكن اختيار المدينة يدويًا. راجع طريقة الحساب والتعديلات وأذونات الإشعارات. لا يتطلب الاستخدام اليومي تسجيل دخول شخصي.</p><p><a href="./#en">سياسة الخصوصية باللغة الإنجليزية</a></p></section><footer>Sirat · Support: Muhamed Golac · Stand / Updated: 03.11.2026<br><a href="./">Datenschutzerklärung / Privacy policy</a></footer></main></body></html>
